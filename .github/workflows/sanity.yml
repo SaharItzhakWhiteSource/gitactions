@@ -1,0 +1,4 @@
+name: Run-Sanity
+
+on: push
+
