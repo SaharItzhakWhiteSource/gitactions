@@ -23,22 +23,36 @@ jobs:
     steps:
     # NODE NPM YARN #
     - uses: actions/checkout@v3
-    - name: Use Node.js 16.16.0 v16.16.0 npm 8.11.0 yarn 1.22.19
+    - name: Install Node.js 16.16.0 v16.16.0 npm 8.11.0 yarn 1.22.19
       uses: actions/setup-node@v3
       with:
         node-version: "16.16.0"
         
-      # GO #
+    # GO #
     - uses: actions/checkout@v3
-    - name: Set up Go
+    - name: Install Go 1.19
       uses: actions/setup-go@v3
       with:
         go-version: 1.19
       
-    - name: Go version
+    # ??? #
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      with:
+        arguments: build
+        
+    - name: Java version
       run: |
-        echo go version
-        go version
+        echo java version
+        java -version
+        mvn -v 
+        gradle -v
         
         
     # PYTHON #
