@@ -21,24 +21,24 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
-    # NPM #
-#     - name: Set up Npm 16.16.0
-#     - uses: actions/setup-node@v2
-#       with:
-#         node-version: "16.16.0"
-        
+    # NODE NPM YARN #
     - uses: actions/checkout@v3
-    - name: Use Node.js 16.16.0
+    - name: Use Node.js 16.16.0 v16.16.0 npm 8.11.0 yarn 1.22.19
       uses: actions/setup-node@v3
       with:
         node-version: "16.16.0"
         
-    - name: Npm Node versions
+      # GO #
+    - uses: actions/checkout@v3
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.19
+      
+    - name: Go version
       run: |
-        echo node / npm version is
-        node -v
-        npm -v
-        yarn -v
+        echo go version
+        go version
         
         
     # PYTHON #
