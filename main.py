@@ -1,8 +1,10 @@
+
 def say_hi():
   print("Hi")
-def say_bye():
-   print("Bye")
 
+  
+def say_bye():
+  print("Bye")
 
         
 say_hi()
