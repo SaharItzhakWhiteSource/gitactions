@@ -38,6 +38,7 @@ jobs:
         echo node / npm version is
         node -v
         npm -v
+        yarn -v
         
         
     # PYTHON #
