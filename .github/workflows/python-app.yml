@@ -53,7 +53,7 @@ jobs:
     # RUBY #
     - uses: actions/checkout@v3
     - name: Set up Ruby 2.x.x
-      uses: actions/setup-ruby@v1
+      uses: actions/setup-ruby@v2
       with:
         ruby-version: 2.x.x
 
