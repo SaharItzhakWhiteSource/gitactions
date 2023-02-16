@@ -90,7 +90,11 @@ jobs:
     - name: Clone 
       uses: actions/checkout@v2
       with:
-        repository: SaharItzhakWhiteSource/portfolio_express
+        repository: whitesource/qa-ws-cli
+    - name: CHECK PWD
+      run: |
+        echo $PWD
+        ls
 
     # RUN TESTS #
     - name: Test with pytest
