@@ -53,9 +53,7 @@ jobs:
     # RUBY - currently under maintenance #
     - uses: actions/checkout@v3
     - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v3
-      with:
-        ruby-version: 3.2
+      uses: actions/setup-ruby@v1
 
     # PYTHON #
     - uses: actions/checkout@v3
