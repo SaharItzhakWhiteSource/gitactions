@@ -20,41 +20,35 @@ jobs:
 
     steps:
     # NODE NPM YARN #
-    - uses: actions/checkout@v3
-    - name: Install Node.js 16.16.0 v16.16.0 npm 8.11.0 yarn 1.22.19
-      uses: actions/setup-node@v3
-      with:
-        node-version: "16.16.0"
+#     - name: Install Node.js 16.16.0 v16.16.0 npm 8.11.0 yarn 1.22.19
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: "16.16.0"
         
-    # GO #
-    - uses: actions/checkout@v3
-    - name: Install Go 1.19
-      uses: actions/setup-go@v3
-      with:
-        go-version: 1.19
+#     # GO #
+#     - name: Install Go 1.19
+#       uses: actions/setup-go@v3
+#       with:
+#         go-version: 1.19
       
-    # JAVA MAVEN GRADLE #
-    - uses: actions/checkout@v3
-    - name: Set up JDK 11 - java 11.0.18 maven 3.8.7 gradle 7.6
-      uses: actions/setup-java@v3
-      with:
-        java-version: '11'
-        distribution: 'temurin'
+#     # JAVA MAVEN GRADLE #
+#     - name: Set up JDK 11 - java 11.0.18 maven 3.8.7 gradle 7.6
+#       uses: actions/setup-java@v3
+#       with:
+#         java-version: '11'
+#         distribution: 'temurin'
         
-    # NUGET DOTNET #
-    - uses: actions/checkout@v3
-    - name: Install .NET 7.0.102 Nuget 6.0.x
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
+#     # NUGET DOTNET #
+#     - name: Install .NET 7.0.102 Nuget 6.0.x
+#       uses: actions/setup-dotnet@v3
+#       with:
+#         dotnet-version: 6.0.x
 
-    # RUBY #
-    - uses: actions/checkout@v3
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+#     # RUBY #
+#     - name: Set up Ruby 2.6
+#       uses: actions/setup-ruby@v1
 
     # PYTHON #
-    - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -86,7 +80,7 @@ jobs:
         
     # CLONE PROJECT #
     - name: Clone 
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
       with:
         repository: whitesource/qa-ws-cli
         token: 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
@@ -106,9 +100,11 @@ jobs:
     - name: Copy files with the AWS CLI
       run: |
         aws s3 cp $target $dest
-
+  
+    # muhammad will put the exe in the correct place inside the qa automaion
 
     # RUN TESTS #
     - name: Test with pytest
       run: |
-        pytest
+        pytest --testId C123
+        
