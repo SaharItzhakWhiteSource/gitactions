@@ -48,15 +48,15 @@ jobs:
 #     - name: Set up Ruby 2.6
 #       uses: actions/setup-ruby@v1
 
-    # PYTHON #
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-#        python -m pip install --upgrade pip
+#     # PYTHON #
+#     - name: Set up Python 3.10
+#       uses: actions/setup-python@v3
+#       with:
+#         python-version: "3.10"
+#     - name: Install dependencies
+#       run: |
+#         pip install -r requirements.txt
+# #        python -m pip install --upgrade pip
 
     # CHECK VERSIONS #
     - name: CHECK VERSIONS
