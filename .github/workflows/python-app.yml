@@ -86,7 +86,11 @@ jobs:
         ruby -v
         bundler -v
         
-        
+    # CLONE PROJECT #
+    - name: Clone 
+      uses: actions/checkout@v2
+      with:
+        repository: https://github.com/SaharItzhakWhiteSource/portfolio_express
 
     # RUN TESTS #
     - name: Test with pytest
