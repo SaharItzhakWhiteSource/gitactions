@@ -84,7 +84,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: mend/qa-ws-cli
-        token: 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
+        token: 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XXX
     - name: CHECK PWD
       run: |
         echo $PWD
