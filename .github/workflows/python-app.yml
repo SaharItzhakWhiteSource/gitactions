@@ -45,16 +45,15 @@ jobs:
         
     # NUGET DOTNET #
     - uses: actions/checkout@v3
-    - name: Install .NET Nuget
+    - name: Install .NET 7.0.102 Nuget 6.3.1.1
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: "6.3.1.1"
         
     - name: Nuget Dotnet version
       run: |
-        echo nuget dotnet version
-        dotnet --version
-        nuget
+        echo $$$ check versions $$$
+        php -v
         
         
     # PYTHON #
