@@ -91,6 +91,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: whitesource/qa-ws-cli
+        token: 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
     - name: CHECK PWD
       run: |
         echo $PWD
