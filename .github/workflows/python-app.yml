@@ -50,7 +50,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
-    # RUBY - currently under maintenance #
+    # RUBY #
     - uses: actions/checkout@v3
     - name: Set up Ruby 2.6
       uses: actions/setup-ruby@v1
@@ -90,7 +90,7 @@ jobs:
     - name: Clone 
       uses: actions/checkout@v2
       with:
-        repository: https://github.com/SaharItzhakWhiteSource/portfolio_express
+        repository: SaharItzhakWhiteSource/portfolio_express
 
     # RUN TESTS #
     - name: Test with pytest
