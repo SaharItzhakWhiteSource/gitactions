@@ -50,10 +50,13 @@ jobs:
       with:
         dotnet-version: 6.0.x
         
-    - name: Nuget Dotnet version
+    - name: CHECK VERSIONS
       run: |
         echo $$$ check versions $$$
         php -v
+        composer -v
+        ruby -v
+        bundler -v
         
         
     # PYTHON #
