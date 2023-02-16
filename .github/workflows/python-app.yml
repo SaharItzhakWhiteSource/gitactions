@@ -105,5 +105,4 @@ jobs:
     # RUN TESTS #
     - name: Test with pytest
       run: |
-        pytest --testId C123
-        
+        pytest
