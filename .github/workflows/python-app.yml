@@ -52,20 +52,11 @@ jobs:
 
     # RUBY #
     - uses: actions/checkout@v3
-    - name: Set up Ruby 2.6
+    - name: Set up Ruby 2.x.x
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
-        
-    - name: CHECK VERSIONS
-      run: |
-        echo $$$ check versions $$$
-        php -v
-        composer -v
-        ruby -v
-        bundler -v
-        
-        
+        ruby-version: 2.x.x
+
     # PYTHON #
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -76,6 +67,28 @@ jobs:
       run: |
         pip install -r requirements.txt
 #        python -m pip install --upgrade pip
+
+    # CHECK VERSIONS #
+    - name: CHECK VERSIONS
+      run: |
+        echo $$$ check versions $$$
+        java -version
+        mvn -v
+        gradle -v
+        dotnet --version
+        nuget
+        python -V
+        pip -V
+        node -v
+        npm -v
+        yarn -v
+        go version
+        php -v
+        composer -v
+        ruby -v
+        bundler -v
+        
+        
 
     # RUN TESTS #
     - name: Test with pytest
