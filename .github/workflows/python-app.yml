@@ -84,7 +84,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: mend/qa-ws-cli
-        token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ secrets.ACCESS_TOKEN_2 }}
     - name: CHECK PWD
       run: |
         echo $PWD
