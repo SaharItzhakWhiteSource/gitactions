@@ -83,8 +83,9 @@ jobs:
     - name: Clone 
       uses: actions/checkout@v2
       with:
+        ssh-key: ${{ secrets.DEPLOY_KEY }}
         repository: mend/qa-ws-cli
-        token: ${{ secrets.ACCESS_TOKEN_2 }}
+#         token: ${{ secrets.ACCESS_TOKEN_2 }}
     - name: CHECK PWD
       run: |
         echo $PWD
